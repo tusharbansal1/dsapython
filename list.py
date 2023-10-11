@@ -92,12 +92,36 @@ a = [1,2,3,4,5,6,7,8]
 #     average = sum(myList) / len(myList)
 # print("Average: ",average)    
 
-a= 'spam'
-b=list(a)
-print(b)
-c='spam-spam1-spam2'
-delimiter = '-'
-d=c.split(delimiter)
-print(d)
+# a= 'spam'
+# b=list(a)
+# print(b)
+# c='spam-spam1-spam2'
+# delimiter = '-'
+# d=c.split(delimiter)
+# print(d)
 
-print(delimiter.join(d))
+# print(delimiter.join(d))
+
+#  List Comprehension
+# prev_list = [1,2,3]
+# new_list = [i*2 for i in prev_list]
+# print(prev_list)
+# print(new_list)
+
+# language = 'Python'
+# new_language_list = [letter for letter in language]
+# print(new_language_list)
+
+prev_list = [-1,10,20,-2,34,0]
+new_list = [number*number for number in prev_list if number<0]
+print(new_list)
+
+sentence = 'My name is Tushar'
+def is_consonant(letter):
+    vowels='aeiou'
+    return letter.isalpha() and letter.lower() not in vowels
+
+print(is_consonant('i'))
+
+consonants = [i for i in sentence if is_consonant(i)]
+print(consonants)
